@@ -1,0 +1,12 @@
+#complete makefile for testing makefile on the shell
+
+#makefile able to compile all files using modular compiling (3pt)
+app : main.o assist_functions.o
+	g++ main.o assist_functions.o -o app
+#makefile able to clear all object and executable file from make (1pt)
+clean:
+	rm *.o
+	rm app
+#makefile able to run application from make (1pt)
+run:
+	./app
